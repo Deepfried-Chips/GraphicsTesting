@@ -35,7 +35,7 @@ include_directories(deps/vulkan-headers/include)
 
 if (WIN32)
     add_executable(GraphicsTesting WIN32 ${PROJECT_SOURCES})
-    target_link_options(GraphicsTesting PRIVATE $<$<CXX_COMPILER_ID:MSVC>:/ENTRY:mainCRTStartup>)
+    
     configure_file("${QT_BASEDIR}/bin/Qt6Core.dll" "${CMAKE_BINARY_DIR}/Qt6Core.dll" COPYONLY)
     configure_file("${QT_BASEDIR}/bin/Qt6Gui.dll" "${CMAKE_BINARY_DIR}/Qt6Gui.dll" COPYONLY)
     configure_file("${QT_BASEDIR}/bin/Qt6Widgets.dll" "${CMAKE_BINARY_DIR}/Qt6Widgets.dll" COPYONLY)
@@ -45,6 +45,10 @@ if (WIN32)
     configure_file("${QT_BASEDIR}/plugins/tls/qschannelbackend.dll" "${CMAKE_BINARY_DIR}/tls/qschannelbackend.dll" COPYONLY)
 else ()
     add_executable(GraphicsTesting ${PROJECT_SOURCES})
+endif ()
+
+if (MSVC)
+    target_link_options(GraphicsTesting PRIVATE $<$<CXX_COMPILER_ID:MSVC>:/ENTRY:mainCRTStartup>)
 endif ()
 
 target_link_libraries(GraphicsTesting glfw glad Qt6::Widgets)
