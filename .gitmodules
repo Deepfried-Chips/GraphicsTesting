@@ -1,9 +1,9 @@
-[submodule "deps/glfw"]
-	path = deps/glfw
+[submodule "deps/thirdparty/glfw"]
+	path = deps/thirdparty/glfw
 	url = https://github.com/glfw/glfw
-[submodule "deps/vulkan-headers"]
-	path = deps/vulkan-headers
-	url = https://github.com/KhronosGroup/vulkan-headers
-[submodule "deps/RmlUi"]
-	path = deps/RmlUi
-	url = https://github.com/mikke89/RmlUi
+[submodule "deps/thirdparty/imgui"]
+	path = deps/thirdparty/imgui
+	url = https://github.com/ocornut/imgui
+[submodule "deps/thirdparty/vulkan-headers"]
+	path = deps/thirdparty/vulkan-headers
+	url = https://github.com/KhronosGroup/Vulkan-Headers

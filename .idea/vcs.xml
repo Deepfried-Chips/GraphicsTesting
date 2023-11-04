@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/RmlUi" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/crashpad" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/glfw" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/vulkan-headers" vcs="Git" />
   </component>
