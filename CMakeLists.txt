@@ -36,8 +36,9 @@ add_subdirectory(deps/RmlUi RmlUi)
 
 include_directories(deps/vulkan-headers/include)
 
+add_library(RmlUi STATIC)
+
 if (WIN32)
-    add_library(RmlUi STATIC)
     add_executable(GraphicsTesting WIN32 ${PROJECT_SOURCES})
 
     configure_file("${QT_BASEDIR}/bin/Qt6Core.dll" "${CMAKE_BINARY_DIR}/Qt6Core.dll" COPYONLY)
